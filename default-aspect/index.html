@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="@APP.VERSION@"/>
+		
+		<title>My Application</title>
+		
+		<@css.bundle theme="standard"@/>
+		
+	</head>
+	<body>
+		<p>Successfully loaded the application</p>
+
+    <!-- dev-minifier can be set to "combined" for all JS content to be bundled with a single request -->
+		<@js.bundle dev-minifier="none" prod-minifier="combined"@/>
+		<script>
+			( function() {
+
+				var ServiceRegistry = require( 'br/ServiceRegistry' );
+				var EventHub = require( 'br/EventHub' );
+				ServiceRegistry.registerService( 'br.event-hub', new EventHub() );
+
+				var App = require( 'brjstodo/App' );
+				var app = new App();
+
+			} )();
+		</script>
+	</body>
+</html>
