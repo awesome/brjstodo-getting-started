@@ -6,7 +6,6 @@ var ItemsViewModel = require( 'brjstodo/todo/items/ItemsViewModel' );
 var KnockoutComponent = require( 'br/knockout/KnockoutComponent' );
 
 var App = function() {
-debugger;  
   var inputViewModel = new InputViewModel();
   var inputComponent =
     new KnockoutComponent( 'brjstodo.todo.input.view-template', inputViewModel );
