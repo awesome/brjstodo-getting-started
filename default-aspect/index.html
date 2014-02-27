@@ -2,14 +2,15 @@
 <html>
 	<head>
 		<base href="@APP.VERSION@"/>
-		
+
 		<title>My Application</title>
-		
+
 		<@css.bundle theme="standard"@/>
-		
+
 	</head>
 	<body>
-		<p>Successfully loaded the application</p>
+	
+    <section id="todoapp"></section>
 
     <!-- dev-minifier can be set to "combined" for all JS content to be bundled with a single request -->
 		<@js.bundle dev-minifier="none" prod-minifier="combined"@/>
